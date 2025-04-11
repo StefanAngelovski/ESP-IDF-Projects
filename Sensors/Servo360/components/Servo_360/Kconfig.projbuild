@@ -1,0 +1,57 @@
+menu "Servo Configuration"
+
+    config SERVO_GPIO
+        int "Servo GPIO number"
+        default 4
+        help
+            GPIO connected to the servo signal line.
+
+    config SERVO_LEDC_FREQ_HZ
+        int "PWM Frequency (Hz)"
+        default 50
+        help
+            50Hz is standard for servos.
+
+    config SERVO_LEDC_RESOLUTION
+        int "PWM Resolution (bits)"
+        default 13
+        help
+            13-bit = 8192 steps.
+
+    config SERVO_MIN_PULSE_US
+        int "Minimum Pulse Width (µs)"
+        default 1000
+        help
+            Full speed clockwise (1ms).
+
+    config SERVO_NEUTRAL_PULSE_US
+        int "Neutral Pulse Width (µs)"
+        default 1500
+        help
+            Stop position (1.5ms).
+
+    config SERVO_MAX_PULSE_US
+        int "Maximum Pulse Width (µs)"
+        default 2000
+        help
+            Full speed counter-clockwise (2ms).
+
+    config SERVO_LEDC_MODE
+        int "LEDC Speed Mode"
+        default 0
+        help
+            0 = Low speed, 1 = High speed.
+
+    config SERVO_TIMER_NUM
+        int "LEDC Timer Number"
+        default 0
+        help
+            Timer number (0-3).
+
+    config SERVO_LEDC_CHANNEL
+        int "LEDC Channel Number"
+        default 0
+        help
+            Channel number (0-7).
+
+endmenu
