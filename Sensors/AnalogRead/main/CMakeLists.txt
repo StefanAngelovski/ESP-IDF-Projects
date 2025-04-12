@@ -1,2 +1,2 @@
-idf_component_register(SRCS "Analog_read.c"
+idf_component_register(SRCS "AnalogRead.c"
                     INCLUDE_DIRS ".")

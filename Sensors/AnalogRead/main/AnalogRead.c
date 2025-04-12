@@ -3,11 +3,11 @@
 #include "freertos/FreeRTOS.h"
 #include "driver/adc.h"
 
-int adc_value = 0;
+unsigned int adc_value = 0;
 
 void app_main(void)
 {
-    adc1_config_channel_atten(ADC1_CHANNEL_3, ADC_ATTEN_DB_12);
+    adc1_config_channel_atten(ADC1_CHANNEL_3, ADC_ATTEN_DB_12); //GPIO4
     adc1_config_width(ADC_WIDTH_BIT_12);
 
     while(true)

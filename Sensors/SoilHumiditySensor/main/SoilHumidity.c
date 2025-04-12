@@ -3,7 +3,7 @@
 #include "freertos/FreeRTOS.h"
 #include "driver/adc.h"
 
-unsigned int smoke_value = 0;
+unsigned int humidity_value = 0;
 
 void app_main(void)
 {
@@ -12,8 +12,8 @@ void app_main(void)
 
     while(true)
     {
-        smoke_value = adc1_get_raw(ADC1_CHANNEL_3); 
-        printf(smoke_value>2000?"Danger\n":"\n");
+        humidity_value = adc1_get_raw(ADC1_CHANNEL_3); 
+        printf("Humidity Value is %d\n", humidity_value); // Goes inverse
 
         vTaskDelay(100 / portTICK_PERIOD_MS);
     }
