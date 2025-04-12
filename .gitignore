@@ -1,52 +1,41 @@
-# Prerequisites
-*.d
+### ESP-IDF Build Directories (Recursive) ###
+**/build/
+**/sdkconfig
+**/sdkconfig.old
+**/managed_components/
+**/target/
 
-# Object files
-*.o
-*.ko
-*.obj
-*.elf
+### ESP-IDF Generated Files ###
+**/*.bin
+**/*.elf
+**/*.map
+**/*.dmp
+**/*.list
+**/*.log
+**/*.csv
+**/*.bak
 
-# Linker output
-*.ilk
-*.map
-*.exp
+### IDE & Tools ###
+.vscode/
+.idea/
+.settings/
+.project
+.cproject
+*.swp
+*~
+*.swo
 
-# Precompiled Headers
-*.gch
-*.pch
+### Python ###
+__pycache__/
+*.py[cod]
 
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
+### Logs and Databases ###
+*.log
+*.sql
+*.sqlite
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+### macOS ###
+.DS_Store
 
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
-# Debug files
-*.dSYM/
-*.su
-*.idb
-*.pdb
-
-# Kernel Module Compile Results
-*.mod*
-*.cmd
-.tmp_versions/
-modules.order
-Module.symvers
-Mkfile.old
-dkms.conf
+### Windows ###
+Thumbs.db
